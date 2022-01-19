@@ -26,7 +26,7 @@ require('database/db.php');
 <body>
 <h1>Add a New Task</h1>
 
-<form action="add.php" method="post">
+<form action="" method="post">
   <div class="mb-3">
     <label>Client Name</label>
     <input type="text" class="form-control" name="clientname">
