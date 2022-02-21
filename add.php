@@ -48,7 +48,7 @@ require('database/db.php');
     <input type="text" class="form-control" name="duedate">
   </div>
   
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Add a Task</button>
 
 </form>
 <b><a href="http://localhost/task-manager/">Go back to HomePage</a></b>
@@ -58,6 +58,7 @@ require('database/db.php');
 <?php
 if(!empty($_POST['clientname']))
 {
+  $id = $_POST['id'];
   $clientname = $_POST['clientname'];
   $task = $_POST['task'];
   $budget = $_POST['budget'];

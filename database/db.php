@@ -6,6 +6,7 @@ function tt($value){
     echo '<pre>';
     print_r($value);
     echo '</pre>';
+    exit();
 }
 // Проверка выполнения запроса к БД
 function dbCheckError($query){

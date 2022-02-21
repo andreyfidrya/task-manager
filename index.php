@@ -51,8 +51,8 @@ echo '</pre>';*/
       <td><?php echo $t['performance'];?></td>
       <td><?php echo $t['duedate'];?></td> 
       <td>
-      <button type="button" class="btn btn-sm btn-primary">Edit</button>
-      <button type="button" class="btn btn-sm btn-danger">Delete</button>
+      <a href="edit.php?id=<?=$t['id'];?>" class="btn btn-sm btn-primary">Edit</a>
+      <a href="edit.php?id_del=<?=$t['id'];?>" class="btn btn-sm btn-danger">Delete</a>
       </td>     
       </tr>
     <?php endforeach; ?>
@@ -61,5 +61,5 @@ echo '</pre>';*/
 </table>
   </body>
 </html>
- 
+
 
