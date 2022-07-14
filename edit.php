@@ -37,6 +37,7 @@ require('database/db.php');
     $budget = $edittask['budget'];
     $performance = $edittask['performance'];
     $duedate = $edittask['duedate'];
+    $author = $edittask['author'];
   }
 ?>
 
@@ -62,6 +63,12 @@ require('database/db.php');
     <label>Due date</label>
     <input type="text" value="<?=$duedate;?>" class="form-control" name="duedate">
   </div>
+
+  <select name="author" class="form-select mb-2" aria-label="Default select example">
+  <option selected><?=$author;?></option>
+  <option>Andrey</option>
+  <option>Elena</option>
+  </select>
   
   <button name="task-update" type="submit" class="btn btn-primary">Update a Task</button>
 
@@ -84,13 +91,15 @@ if($_SERVER['REQUEST_METHOD'] ==='POST' && isset($_POST['task-update'])){
     $budget = $_POST['budget'];
     $performance = $_POST['performance'];
     $duedate = $_POST['duedate'];
+    $author = $_POST['author'];
 
     $updatetask = [
       'clientname' => $clientname,
       'task' => $task,
       'budget' => $budget, 
       'performance' => $performance,
-      'duedate' => $duedate               
+      'duedate' => $duedate,
+      'author' => $author               
   ];
 
   update('tasks', $id, $updatetask);

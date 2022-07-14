@@ -39,6 +39,7 @@ echo '</pre>';*/
       <th scope="col">Budget</th>
       <th scope="col">Performance</th>
       <th scope="col">Due date</th>
+      <th scope="col">Author</th>
       <th scope="col">Action</th>       
     </tr>
   </thead>
@@ -50,6 +51,7 @@ echo '</pre>';*/
       <td><?php echo $t['budget'];?></td>
       <td><?php echo $t['performance'];?></td>
       <td><?php echo $t['duedate'];?></td> 
+      <td><?php echo $t['author'];?></td>
       <td>
       <a href="edit.php?id=<?=$t['id'];?>" class="btn btn-sm btn-primary">Edit</a>
       <a href="edit.php?id_del=<?=$t['id'];?>" class="btn btn-sm btn-danger">Delete</a>

@@ -48,6 +48,12 @@ require('database/db.php');
     <input type="text" class="form-control" name="duedate">
   </div>
   
+  <select name="author" class="form-select mb-2" aria-label="Default select example">
+  <option selected>Select an author:</option>
+  <option>Andrey</option>
+  <option>Elena</option>
+  </select>  
+  
   <button type="submit" class="btn btn-primary">Add a Task</button>
 
 </form>
@@ -64,13 +70,15 @@ if(!empty($_POST['clientname']))
   $budget = $_POST['budget'];
   $performance = $_POST['performance'];
   $duedate = $_POST['duedate'];
+  $author = $_POST['author'];
   
   $newtask = [
     'clientname' => $clientname,
     'task' => $task,
     'budget' => $budget,
     'performance' => $performance,
-    'duedate' => $duedate     
+    'duedate' => $duedate,
+    'author' => $author     
   ];
   
   insert('tasks', $newtask);
