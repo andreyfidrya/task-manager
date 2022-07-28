@@ -21,9 +21,13 @@ require('database/db.php');
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="my2.css">
+    <script src="https://kit.fontawesome.com/a561d3a912.js" crossorigin="anonymous"></script>
     <title>Task Manager</title>
 </head>
 <body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 <h1>Add a New Task</h1>
 
 <form action="" method="post">
@@ -40,8 +44,8 @@ require('database/db.php');
     <input type="text" class="form-control" name="budget">
   </div>
   <div class="mb-3">
-    <label>Performance</label>
-    <textarea class="form-control" name="performance"></textarea>
+    <label for="editor">Performance</label>
+    <textarea class="form-control" id="editor" name="performance"></textarea>
   </div>
   <div class="mb-3">
     <label>Due date</label>
@@ -58,6 +62,9 @@ require('database/db.php');
 
 </form>
 <b><a href="http://localhost/task-manager/">Go back to HomePage</a></b>
+<script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
+<script src="assets/js/scripts.js"></script>
+
 </body>
 </html>
 

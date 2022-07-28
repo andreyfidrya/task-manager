@@ -56,8 +56,8 @@ require('database/db.php');
     <input type="text" value="<?=$budget;?>" class="form-control" name="budget">
   </div>
   <div class="mb-3">
-    <label>Performance</label>
-    <textarea class="form-control" name="performance"><?=$performance;?></textarea>
+    <label for="editor">Performance</label>
+    <textarea class="form-control" id="editor" name="performance"><?=$performance;?></textarea>
   </div>
   <div class="mb-3">
     <label>Due date</label>
@@ -74,6 +74,8 @@ require('database/db.php');
 
 </form>
 <b><a href="http://localhost/task-manager/">Go back to HomePage</a></b>
+<script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
+<script src="assets/js/scripts.js"></script>
 </body>
 </html>
 
